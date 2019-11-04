@@ -1,0 +1,335 @@
+	TARBELL BASIC LABEL DESCRIPTIONS	MARCH 15, 1979
+
+Following is a short description of each label in Tarbell BASIC.
+Only those considered important are included, such as the names
+of major subroutines and tables.
+
+LABEL	DESCRIPTION
+
+Tables:
+
+ETBLE	Powers of e.
+MTBLE	Multiplication table.
+OTBL	Operator table.
+COJMP	Command jump table.
+EMSG	Error message table.
+FUNT	Intrinsic and special functions.
+INTBL	Intermediary reserved words.
+INTB	Intermediary jump addresses.
+ODTBL	Oddball statement name table.
+NOTBL	Normal statement name table.
+COTBL	Command name table.
+OPRCS	Operator processor addresses.
+FPRCS	Function processor addresses.
+NSPRC	Statement processor addresses.
+
+Input/Output routines:
+
+MFND	Find I/O mode entry, get channel address.
+CONT	Control-C scanner.
+KYIN	Keyboard input.
+TOUT	Output to terminal(s).
+COUT	Output byte in A to cassette.
+BPORT	Binary output port.
+BINPOR	Binary input port.
+LNOT	Output to terminal or cassette.
+MSGER	Output a line at HL to terminal.
+CLIN	Output a line at HL to cassette.
+LIIN	Input a line from cassette or keyboard.
+CRLF	Send carriage return.
+LIKY	Input a line from keyboard.
+LICA	Input a line from cassette.
+CAIN	Input a byte from cassette.
+
+Command Processors:
+
+EDIT	EDIT command executive.
+LIST	LIST command interpreter.
+ENTR	ENTER command interpreter.
+DLTE	DELETE command interpreter.
+CLER	CLEAR command interpreter.
+CHANG	CHANGE command interpreter.
+PRUN	RUN command processor.
+PCNT	CONT command interpreter.
+PNEW	NEW command processor.
+PRSY	SYMBOL command processor.
+
+Statement Processors:
+
+INON	ON
+INGO	GOPROC
+INFO	FOR
+INGT	GOTO
+INGS	GOSUB
+INIF	IF
+INRE	REM
+INCH	CHANNEL
+SPDI	DIR
+SPEN	MOVEEOF
+SPERA	ERASE
+SPKI	KILL
+SPREN	RENAME
+SPRES	RESET
+SPST	MOVEBOF
+SPWID	WIDTH
+SPRA	PRINT
+SPRB	DIM and LET
+SPRC	END
+SPRD	GOTO
+SPRE	IF
+SPRF	INPUT
+STSAV	SAVE
+STAPP	APPEND
+STLOA	LOAD
+STOPE	OPEN
+STCLO	CLOSE
+SPRG	ASSIGN
+SPRH	DROP
+SPRI	GOPROC
+SPRJ	FOR
+SPRL	NEXT
+SPRM	GOSUB
+SPRN	ON..GOTO
+SPRO	OUT
+SPRP	POKE
+SPRQ	PROCEDURE
+SPRR	READ
+SPRS	RESTORE
+SPRT	RECEIVE
+SPRU	RETURN
+SPRV	STOP
+SPRW	WAIT
+SPRX	SAVE
+SPRY	LOAD
+SPRZ	CLEAR
+SPR1	CHANNEL
+FNPR	FNxx
+
+Operator Processors:
+
+FNOP	Find operand.
+GOFO	Get operands for operators.
+OPR10	Logical operator preparer.
+OPR20	Logical operator ender.
+OPR30	Numeric finisher.
+OPR40	Relational operator finisher.
+OPR50	Relational operator preparer.
+OPRA	OR processor.
+OPRB	AND processor.
+OPRC	NOT processor.
+OPRD	>= processor.
+OPRE	<= processor.
+OPRF	> processor.
+OPRG	< processor.
+OPRH	<> processor.
+OPRI	= processor.
+OPRP	- processor.
+OPRJ	? processor.
+OPRK	* processor.
+OPRL	Powers processor.
+OPRM	+ processor.
+OPRN	Unary - processor.
+OPRO	Unary NOT processor.
+AOOP	Array operator processor.
+
+Function Processors:
+
+FPRA	ABS
+FPRB	ASC
+FPRC	ATN
+FPRD	CHR$
+FPRE	COS
+FPRF	EXP
+FPRG	FRE
+FPRH	INP
+FPRI	INT
+FPRJ	LEFT$
+FPRK	LEN
+FPRL	LOG
+FPRM	MID$
+FPRN	OCT$
+FPRO	PEEK
+FPRP	POS
+FPRQ	RIGHT$
+FPRR	RND
+FPRS	SGN
+FPRT	SIN
+FPRU	SPACE$
+FPRV	SPC
+FPRW	SQR
+FPRX	STR$
+FPRY	TAB
+FPRZ	TAN
+FPRAA	USR
+FPRAB	VAL
+FPRCAL	CALL
+FPRFLX	FILEXISTS
+FPRLOC	LOC
+FPRMAT	MATCH
+FPRREC	RECORD
+FPRSEA	SEARCH
+
+Arithmetic routines:
+
+SUB16	16-bit subtract routine.
+CMP16	16-bit compare routine.
+MULT	8 by 8 multiply routine.
+FSTML	Fast multiply by 6.
+DIV	Binary divide 16/8 to 8 with remainder.
+ADHL	8-bit add to HL.
+SUB2	Two digit BCD subtract.
+EXAD	Add exponents.
+NORM	Normalize working register.
+FXAD	Fixed point add number at DE,HL to BC.
+CMPL1	10's complement buffer BCD.
+FPSUB	Floating point subtract.
+FPADD	Floating point add.
+MUL2	Multiply 2 BCD digits by 2 BCD digits.
+FMUL	Fixed point multiply (HL) times (DE) to WORK1.
+FLML	Floating point multiply (HL) times (DE) to (BC).
+SQUR	Square root of (HL) to (DE).
+UNPK	Unpack packed BCD at HL to DE.
+PWER	Powers of two generator.
+TSTR	Divide test and subtract.
+DIV1A	Divide mantissas for floating point divide.
+DIV2A	Floating point divide (HL)/(DE) to (BC).
+PACK	Pack BCD digits at HL to DE.
+ISUB	Integer subtract (HL)-(DE) to (BC).
+IADD	Integer add (HL)+(DE) to (BC).
+IMUL	Integer multiply (HL)*(DE) to (BC).
+IDIV	Integer divide (HL)/(DE) to (BC).
+INFL	Convert integer at HL to floating point at DE.
+FLIN	Convert floating point at HL to integer at DE.
+BCDBN	Convert BCD exponent in A to binary in A.
+SIGN	Convert number to equivalent sign.
+INTG	Integer of (HL) to (DE).
+ABSLT	Absolute of (HL) to (DE).
+STNM	Convert ASCII string at HL to number at DE.
+NMST	Convert number at HL to ASCII string at DE.
+TRMN	Terminator for transcendental functions.
+CMPR	Compare (HL) and (DE).
+TWOPI	Constant 2*PI.
+NRML	Normalize angle in radians.
+TRIN	Trig series initializer.
+SERS	Sine/cosine series evaluation.
+SINE	Sine and cosine evaluation.
+TANG	Tangent.
+ATAN	Arctangent.
+BCDB	Convert number at HL to two byte binary in HL.
+BBCD	Convert binary in HL to number at DE.
+ETOX	E raised to the X'th power.
+LOGX	LN(HL) to (DE).
+PWRS	Square root function.
+MATCH	Matcher - converts (HL) and (DE) to same form.
+MCHK	Math error processor.
+ADDER	Add (BC) = (HL) + (DE).
+SUBER	Subtract (BC) = (HL) - (DE).
+MULER	Multiplier (BC) = (HL) times (DE).
+DIVER	Divider (BC) = (HL) divided by (DE).
+PWRSM	Continuation of square root routine.
+I6X16	16 by 16 mulitply HL=HL*DE.
+
+Constants:
+
+ONE11	Constant one.
+ZERO0	Constant zero.
+CONS3	Constant 65536.
+ETBLE	Powers of E.
+CON99	Constant.
+TWO22	Two
+CONS1	1.69
+CONS2	PI/2
+HNDRD	100
+
+Messages:
+
+BEGIN	The beginning (opening)
+OKOK	FILE OK
+PCLDM	READING
+PCLOM	CHECKING
+PCSVM	WRITING
+PCSAM	WRITING BASIC
+STMSG	STOP IN
+
+Miscellaneous:
+
+START	The start of the non-I/O (main) part of BASIC.
+MVDN	Move block down.
+MVUP	Move block up.
+MOVE	Move data block up or down.
+STRNG	String compare.
+STRSRH	String search.
+COUNT	Count characters in string.
+SRC8	8-bit search.
+TABLE	2-byte table look up.
+CHCK	Check integrity of BASIC.
+ZERO	Zeroes A bytes starting at HL.
+SFTL	Shift left one BCD digit (MSB at HL).
+SHFT	Shift buffer at HL down by A places.
+FCTRL	Compute factorial term.
+SSRC	Find symbol in symbol table and directory.
+DFND	Find symbol directory entry.
+ITAB	Insert symbol in symbol table and directory.
+USCN	Upscan in input line and update TSCN and NSCN.
+BSCN	Backscan input line and update TSCN and NSCN.
+GTNM	Get symbol number.
+LGLB	Legal label check.
+LGNM	Legal number check.
+POPR	Process operator.
+PLDS	Line descriptor processor.
+CCRC	Comma, colon, remark, and end of line checker.
+PLDL	Process line descriptor list.
+PREM	Remarks processor.
+EVEX	Evaluate infix expression into reverse polish.
+ERROR	Error processor.
+ICLS	Insert coded line into source code file.
+CLPR	Process coded line.
+PFUN	Process instrinsic functions.
+SCCC	Check for semi-colon or comma.
+ICBY	Insert code byte.
+NSPR	Normal
+PINT	Process intermediaries.
+ENPR	End of
+PROS	Process oddball statements.
+CHST	Check for statement.
+RSTRT	Executive.
+INSN	Insert statement name.
+GTIN	Get increment.
+MFOS	Move forward one statement in source.
+MBOS	Move backward one statement in source.
+AVAP	Assign variable and array pointer space.
+UPOS	Undo polish string and print it.
+PRIT	Print internal form.
+FEND	Find end of expression and dump it.
+DMNM	Dump name.
+LOOKAH	Dump statement.
+DMELSE	The word ELSE.
+DMSG3	The word GOTO.
+DMSG4	The word TO.
+DMSG5	The word STEP.
+DMSG6	The word THEN.
+DNLS	Dump name list.
+LILO	Find line in source with offset.
+GLFC	Get line and offset for commands.
+LNDSC	Output line descriptor.
+PUSZ	Push item on control stack.
+POPS	Pop item from control stack.
+GEIM	Get item address.
+AMBL	Assign memory block of length HL.
+KILL	Kill assigned memory block.
+INTR	Initializer.
+EVPE	Evaluate polish expression.
+RUN8	Run controller.
+OPRQ	Assignment operator processor.
+SPRA	Print processor.
+FPR10	Get numerical operand address.
+FPR20	Get string operand address.
+FPR30	Get numerical operand and check for comma.
+FPR40	Get numerical operand to binary.
+FPR50	String finisher.
+FPR60	Binary finisher.
+MASKER	Convert number to a bit set.
+SPRK	Pop a control block indicator.
+SRFLG	First scratch area item.
+PNTR	Last scratch area item.
+
