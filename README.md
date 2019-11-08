@@ -1,10 +1,10 @@
-#Tarbell Basic
+# Tarbell Basic
 
-#Why is this project here?  
+## Why is this project here?  
 
 Just to preserve what is now a piece of computing history: the source code for Tarbell Basic, a competitor to Microsoft's then ubiquitous Basic interpreter.  I have an interest in this mainly because I wrote Tarbell Basic!
 
-##The story...
+## The story...
 The year was 1976.  Don Tarbell (founder of the then-famous Tarbell Electronics) had some very successful S100 boards, most especially his floppy disk interface.  He wanted a low cost Basic interpreter that he could sell along with his floppy boards; something that would compete with the dominant Microsoft Basic.  So he placed an ad in a computer hobbyist magazine (probably either TCH or Byte, but I've forgotten) asking for a quote on a Basic interpreter, written using “structured programming” techniques.  The ad was short, and very light on details; I'm sure Don was expecting it to be a catalyst for a more detailed discussion.
 
 At that point I was still enlisted in the U.S. Navy.  Someone pointed out the ad to me, and suggested that I respond.  Those who know me will have trouble understanding just how incredibly naive I was back then about the ways of business.  Well, maybe they'll have trouble :)  Anyway, there were several very good reasons why my responding was completely crazy.
@@ -50,7 +50,7 @@ For years afterward, I assumed I'd never hear about Tarbell Basic again.  But th
 
 I don't have any interest in running that old code myself.  But I sure wish I had those old notes! 
 
-##What's in these files?
+## What's in these files?
 Those are the actual source code files that I delivered to Don Tarbell.  The version here is, I believe, the last delivery I made to him.  I got these files courtesy of a fellow in Germany who stumbled upon the diskettes containing them in a yard sale.
 
 The files are Z80 assembly language, but not using the original Zilog mnemonics.  The assembler is one that I wrote myself, and why I chose to use non-standard mnemonics is a mystery to me at this remove.  Nonetheless, if you are familiar with the Z80 the code will be easy enough to understand.  Of course I no longer have that assembler, so I have no way to assemble this code!
